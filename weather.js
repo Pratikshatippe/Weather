@@ -3,9 +3,9 @@
 function showInput() {
   var information = [
     { cityname: "Kolhapur, Maharashtra", type: "humidity ", temperature: 30 },
-    { cityname: "Pune, Maharashtra" , type: "Mostly cloudy☁️", temperature: 28},
-    { cityname: "Delhi, Maharashtra", type: "wind💨", temperature: 24},
-    { cityname: "Bengaluru, Karnataka", type: "Partly Cloudy☁️", temperature: 21}
+    { cityname: "Pune, Maharashtra" , type: "Mostly cloudy", temperature: 28},
+    { cityname: "Delhi, Maharashtra", type: "wind", temperature: 24},
+    { cityname: "Bengaluru, Karnataka", type: "Partly Cloudy", temperature: 21}
 ]
   var e = document.getElementById("list");
   var strUser = e.options[e.selectedIndex].value;
@@ -26,3 +26,4 @@ today.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true
 )
 document.getElementById("demo2").innerHTML = time1;
 
+// temperature

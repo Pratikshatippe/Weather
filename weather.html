@@ -2,37 +2,38 @@
 Author name: Pratiksha Tippe -->
 <html>
     <head>
-        <title> Weather App 2</title>
+        <title>Weather App</title>
         <link rel="stylesheet" href="weather.css">
     </head>
     <body>
-            <div class="row">
+        <div class="row">
             <div class="column1">
-                    <h1>Weather <span>App</span></h1>
-                  </div>
-                  <div class="column2">
-        <div class="weatherApp">
-            <div class="cityName">
-               <div>
-                   <p id='demo'></p>
-                   <div class="DateTime">
-                    <div >
-                    <br><p id="demo1"></p>
-                    <p id="demo2"></p> <br>
-                    <p id="demo3"></p> <br>
-                    <p id="demo4"></p>
-                    </div><br>
-                    <!-- <h3>°<span>C|F</span></h3> -->
-                    <label for="city">Enter City Name</label><br>
-                    <select id="list">
-                    <option value="Pune, Maharashtra">Pune</option>
-                    <option value="Delhi, Maharashtra">Delhi</option>
-                    <option value="Kolhapur, Maharashtra">Kolhapur</option>
-                    <option value="Bengaluru, Karnataka">Bengaluru</option>
-                    </select>       <input type="submit" onclick="showInput();"><br/>
-                   </div> 
+                <h1>Weather<span>App</span></h1>
             </div>
-        </div>
+            <div class="column2">
+        <!-- <div class="weatherApp"> -->
+                <div class="cityName">
+                   <p id='demo'></p>
+                        <div class="DateTime">
+                        
+                        <br><p id="demo1"></p>
+                        <p id="demo2"></p> <br></div>
+                        <p id="demo3"></p> <br>
+                        <p id="demo4"></p>
+                        
+                        <span class="cel" onclick=displayCel()>&#8451</span>
+                   <span>|</span>
+                   <span class="far" onclick=displayFar()>&#8457</span>
+                        <br>
+                        <label for="city">Enter City Name</label><br>
+                        <select id="list">
+                        <option value="Pune, Maharashtra">Pune</option>
+                        <option value="Delhi, Maharashtra">Delhi</option>
+                        <option value="Kolhapur, Maharashtra">Kolhapur</option>
+                        <option value="Bengaluru, Karnataka">Bengaluru</option>
+                        </select>       <input type="submit" onclick="showInput();"><br/>
+                </div> 
+            </div>
         </div>
         <!-- column 3 -->
         

@@ -1,47 +1,61 @@
+body{
+  padding: 0;
+  margin: 0;
+}
 * {
     box-sizing: border-box;
   }
 .cityName{
-    font-size: 2em;
+    font-size: 1em;
+    margin-left: 50px;
+    margin-top: 60px;
+    text-align: left;
 }
-.temperature-value{
-    width: 300px;
-    height:60px;
+span{
+  color:black;
 }
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+.column1 h1{
+  color: white;
+}
 .column1{
     background-color:blue;
     float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1890f0;
     text-align: center;
     width: 50%;
-    padding: 10px;
-    height: 1000px; /* Should be removed. Only for demonstration */
+    padding: 150px;
+    height: 700px;
+    padding-bottom: 250px; 
   }
   .column2{
     background-color:white;
     float: left;
     width: 50%;
     padding: 10px;
-    height: 1000px; /* Should be removed. Only for demonstration */
+    height: 700px; 
   }
+  .column2.weatherApp{
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .column2.column2.weatherApp{font-size: 20px;margin: 2px;padding: 2px;position: relative;}
 label{
     font-size: "150";
-    
-
 }
 .DateTime{
     font-family: 'Times New Roman', Times, serif;
-    font-style: inherit;
-    font-size: "70";
-
+    font-style: italic;
+    font-size: "50";
 }
-
 p{
-    display:inline;
+  font-size: 1em;
+   display:inline;
+}
+h1{
+  font-size: 4em;
 }
 /* h2{
     display:inline;
