@@ -7,6 +7,12 @@ body{
 * {
     box-sizing: border-box;
   }
+  .fahrenheit{
+    cursor: pointer;
+  }
+  .celsius{
+    cursor: pointer;
+  }
 .cityName{
     font-size: 1em;
     margin-left: 50px;
@@ -27,6 +33,11 @@ span{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2em;
 }
+#st{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+}
+
 #demo4{
   font-size: 2em;
 }
