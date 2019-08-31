@@ -1,21 +1,22 @@
 
 
 var information = [
-  { cityname: "Pune, Maharashtra", type: "Rainy ☔", temperature: 40 },
-  { cityname: "Delhi, Maharashtra" , type: "Mostly cloudy ☁", temperature: 28},
-  { cityname: "Kolhapur, Maharashtra", type: "sunny ☀️", temperature: 24},
-  { cityname: "Bengaluru, Karnataka", type: "Partly Cloudy ⛅", temperature: 21}
+  { cityname: "Pune, Maharashtra", type: "Rainy ☔", temperature: 25 },
+  { cityname: "Chennai, Tamil Nadu" , type: "Mostly cloudy ☁", temperature: 28},
+  { cityname: "Kolhapur, Maharashtra", type: "sunny ☀️", temperature: 32},
+  { cityname: "Bengaluru, Karnataka", type: "Partly Cloudy ⛅", temperature: 21},
+  { cityname: "Lucknow, Uttar Pradesh", type: "sunny ☀️", temperature: 34},
+  { cityname: "Bhopal, Madhya Pradesh", type: "Mostly Cloudy ☁", temperature: 22}
 ] 
-// Displays data on webpage
+//compare value with array and displays data on webpage
 function showInput() {
-  
   var e = document.getElementById("list");
   var currentCity = e.options[e.selectedIndex].value;
-  var x = information.filter(v => v.cityname == currentCity);
+  var x = information.find(v => v.cityname == currentCity);
 
-document.getElementById("demo").innerHTML=x[0].cityname;
-document.getElementById("demo3").innerHTML = x[0]['type'];
-document.getElementById("demo4").innerHTML = x[0]['temperature'];
+  document.getElementById("demo").innerHTML=x.cityname;
+  document.getElementById("demo3").innerHTML = x.type;
+  document.getElementById("demo4").innerHTML = x.temperature;
 } 
 
 // // Date and Time
@@ -28,21 +29,18 @@ today.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true
 )
 document.getElementById("demo2").innerHTML = time1;
 
-// // temperature
+// // Celsius to fahrenheit conversion of temperature
 function fahrenheit()
 {
   var e = document.getElementById("list");
   var currentCity = e.options[e.selectedIndex].value;
-  var x1 = information.filter(v => v.cityname == currentCity);
-    // var currentCity = e.options[e.selectedIndex].value;
-
-  
-// console.log(fahrenheit);
+  var x1 = information.find(v => v.cityname == currentCity);
+ // console.log(fahrenheit);
   var fahrenheit;
-  if(fahrenheit != ''){
-    fahrenheit = (x1[0].temperature * 9/5) + 32; 
+  // if(fahrenheit != ''){
+    fahrenheit = (x1.temperature * 9/5) + 32; 
     document.getElementById("demo4").innerHTML = fahrenheit;
-  }
+  // }
 }
 
 // function celsius()
