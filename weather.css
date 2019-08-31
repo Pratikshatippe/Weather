@@ -31,7 +31,6 @@ span{
   font-size: 2em;
 }
 .column1{
-    background-color:blue;
     float: left;
     display: flex;
     align-items: center;
