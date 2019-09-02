@@ -11,7 +11,6 @@ var information = [
 //compare value with array and displays data on webpage
 function showInput() {
   var e = document.getElementById("list").value;
-  // var currentCity = e.options[e.selectedIndex].value;
   var x = information.find(v => v.cityname == e);
 
   document.getElementById("city").innerHTML=x.cityname;
@@ -34,24 +33,12 @@ document.getElementById("time").innerHTML = time1;
 function fahrenheit()
 {
   var e = document.getElementById("list").value;
-  // var currentCity = e.options[e.selectedIndex].value;
   var x1 = information.find(v => v.cityname == e);
  // console.log(fahrenheit);
   var fahrenheit;
-  // if(fahrenheit != ''){
     fahrenheit = Math.round((x1.temperature * 9/5) + 32); 
     document.getElementById("temp").innerHTML = fahrenheit;
-  // }
+  
 }
 
-// function celsius()
-// {
-//   var fahrenheit = document.getElementById("demo4").innerHTML;
-// // console.log(fahrenheit);
-//   var f;
-//   if(fahrenheit != ''){
-//     f = (fahrenheit - 32) * 5/9; 
-//     document.getElementById("demo4").innerHTML = f;
-//   }
-// }
   
