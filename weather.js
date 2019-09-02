@@ -1,33 +1,54 @@
-
+﻿
 
 var information = [
   { cityname: "Pune", State: "Maharashtra", type: "Rainy ☔", temperature: 25 },
-  { cityname: "Chennai", State: "Tamil Nadu", type: "Mostly cloudy ☁", temperature: 28},
-  { cityname: "Kolhapur", State: "Maharashtra", type: "sunny ☀️", temperature: 32},
-  { cityname: "Bengaluru", State: "Karnataka", type: "Partly Cloudy ⛅", temperature: 21},
-  { cityname: "Lucknow", State: "Uttar Pradesh", type: "sunny ☀️", temperature: 34},
-  { cityname: "Bhopal", State: "Madhya Pradesh", type: "Mostly Cloudy ☁", temperature: 22}
+  { cityname: "Chennai", state: "Tamil Nadu", type: "Mostly cloudy ☁", temperature: 28},
+  { cityname: "Kolhapur", state: "Maharashtra", type: "sunny ☀️", temperature: 32},
+  { cityname: "Bengaluru", state: "Karnataka", type: "Partly Cloudy ⛅", temperature: 21},
+  { cityname: "Lucknow", state: "Uttar Pradesh", type: "sunny ☀️", temperature: 34},
+  { cityname: "Bhopal", state: "Madhya Pradesh", type: "Mostly Cloudy ☁", temperature: 22}
 ] 
 //compare value with array and displays data on webpage
-function showInput() {
-  var e = document.getElementById("list").value;
-  var x = information.find(v => v.cityname == e);
+let e = '';
+let x = '';
+let data = {};
+let temperature = '';
+// let temperatureC = '';
+  function showInput(){
 
-  document.getElementById("city").innerHTML=x.cityname;
-  document.getElementById("state").innerHTML=x.State;
-  document.getElementById("weather").innerHTML = x.type;
-  document.getElementById("temp").innerHTML = x.temperature;
+    e = document.getElementById("list").value;
+   
+    x = information.find(v => v.cityname == e);
+    data = {
+      cityname: x.cityname,
+      state: x.state,
+      type: x.type,
+      temperature: x.temperature,
+    }
+
+    let store = new weatherdata(data);
+    // temperature = report.getTemp();
+    document.getElementById("city").innerHTML= store.getCity();
+    document.getElementById("state").innerHTML= store.getState();
+    document.getElementById("weather").innerHTML = store.getType();
+    document.getElementById("temp").innerHTML = store.getTemp();
+  
 } 
 
-// // Date and Time
-var today = new Date();
-var day = today.getDay();
-var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
-document.getElementById("day").innerHTML = daylist[day];
-var time1 = (
-today.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+// // use class daydate show date and time
+class daydate{
+  constructor(){
+this.today = new Date();
+this.day = this.today.getDay();
+this.daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+// document.getElementById("day").innerHTML = daylist[day];
+this.time1 = (
+this.today.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
 )
-document.getElementById("time").innerHTML = time1;
+  }
+}
+document.getElementById("day").innerHTML = new daydate().daylist['this.day'];
+document.getElementById("time").innerHTML = new daydate().time1;
 
 // // Celsius to fahrenheit conversion of temperature
 function fahrenheit()
