@@ -1,3 +1,4 @@
+// Creating class file and define method which is call from weather.js file
 class weatherdata{
     constructor(data){
         this.cityname = data.cityname;

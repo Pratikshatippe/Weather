@@ -1,4 +1,4 @@
-﻿
+﻿// javascript file for weather.html file to show city, state, condition and temperature from below array.
 
 var information = [
   { cityname: "Pune", State: "Maharashtra", type: "Rainy ☔", temperature: 25 },
@@ -6,9 +6,9 @@ var information = [
   { cityname: "Kolhapur", state: "Maharashtra", type: "sunny ☀️", temperature: 32},
   { cityname: "Bengaluru", state: "Karnataka", type: "Partly Cloudy ⛅", temperature: 21},
   { cityname: "Lucknow", state: "Uttar Pradesh", type: "sunny ☀️", temperature: 34},
-  { cityname: "Bhopal", state: "Madhya Pradesh", type: "Mostly Cloudy ☁", temperature: 22}
+  { cityname: "Bhopal", state: "Madhya Pradesh", type: "Partly Cloudy ⛅", temperature: 22}
 ] 
-//compare value with array and displays data on webpage
+//compare array value
 let e = '';
 let x = '';
 let data = {};
@@ -27,7 +27,6 @@ let temperature = '';
     }
 
     let store = new weatherdata(data);
-    // temperature = report.getTemp();
     document.getElementById("city").innerHTML= store.getCity();
     document.getElementById("state").innerHTML= store.getState();
     document.getElementById("weather").innerHTML = store.getType();
@@ -41,13 +40,12 @@ class daydate{
 this.today = new Date();
 this.day = this.today.getDay();
 this.daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
-// document.getElementById("day").innerHTML = daylist[day];
 this.time1 = (
 this.today.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
 )
   }
 }
-document.getElementById("day").innerHTML = new daydate().daylist['this.day'];
+document.getElementById("day").innerHTML = new daydate().day;
 document.getElementById("time").innerHTML = new daydate().time1;
 
 // // Celsius to fahrenheit conversion of temperature
