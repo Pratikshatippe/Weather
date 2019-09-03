@@ -36,17 +36,22 @@ let temperature = '';
 
 // // use class daydate show date and time
 class daydate{
-  constructor(){
-this.today = new Date();
-this.day = this.today.getDay();
-this.daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
-this.time1 = (
-this.today.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+daydate1(){
+let today = new Date();
+let day = today.getDay();
+let daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+document.getElementById("day").innerHTML = daylist[day];
+let time1 = (
+today.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
 )
+// console.log(daylist[day]);
+document.getElementById("time").innerHTML = time1;
   }
 }
-document.getElementById("day").innerHTML = new daydate().day;
-document.getElementById("time").innerHTML = new daydate().time1;
+// creating object of daydate class
+let demo = new daydate();
+demo.daydate1();
+
 
 // // Celsius to fahrenheit conversion of temperature
 function fahrenheit()
