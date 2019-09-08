@@ -1,0 +1,44 @@
+<!-- Weather App
+Author name: Pratiksha Tippe 
+This file contain designing part of web page such as weather, date, time, temperature with city name and state-->
+<html>
+    <head>
+        <title>Weather App</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div class="row">
+            <div class="column1">
+                <h1>Weather<span>App</span></h1>
+            </div>
+            <div class="column2">
+                <div class="cityName">
+                   <p id='city'>Pune</p> <p id='state'>Maharashtra</p>
+                        <div class="DateTime">
+                        <p id="day">Tuesday</p>
+                        <p id="time">11pm</p> 
+                        </div>
+                        <p id="weather">Rainy ☔</p><br>
+                        <p id="temp">25</p>
+                        <span class="celsius" onclick=showInput()>&#8451</span>
+                   <span>|</span>
+                   <span class="fahrenheit" onclick=fahrenheit()>&#8457</span>
+                        <br><br><br>
+                        <label for="city">Enter City Name</label><br>
+                        <input type="text" id="list" list="datalist" name="cities" placeholder="City,State">
+                        <datalist id="datalist">
+                        <option value="Pune">Pune</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Kolhapur">Kolhapur</option>
+                        <option value="Bengaluru">Bengaluru</option>
+                        <option value="Lucknow">Lucknow</option>
+                        <option value="Bhopal">Bhopal</option>
+                        </datalist>       <input type="submit" onclick="showInput();"><br/>
+                </div> 
+            </div>
+        </div> 
+    </body>
+    <script src="fun.js"></script>
+    <script src="app.js"></script>
+</html>
