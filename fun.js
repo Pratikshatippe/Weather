@@ -1,7 +1,7 @@
 ﻿// javascript file for weather.html file to show city, state, condition and temperature from below array.
 
 var information = [
-  { cityname: "Pune", State: "Maharashtra", type: "Rainy ☔", temperature: 25 },
+  { cityname: "Pune", state: "Maharashtra", type: "Rainy ☔", temperature: 25 },
   { cityname: "Chennai", state: "Tamil Nadu", type: "Mostly cloudy ☁", temperature: 28},
   { cityname: "Kolhapur", state: "Maharashtra", type: "sunny ☀️", temperature: 32},
   { cityname: "Bengaluru", state: "Karnataka", type: "Partly Cloudy ⛅", temperature: 21},
