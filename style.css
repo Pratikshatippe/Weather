@@ -22,6 +22,7 @@ body{
     width: 50vw;
     font-size: 2vw;
     text-align: left;
+
   }
 span{
     color:var(--color-1);
@@ -29,12 +30,15 @@ span{
 .column1 h1{
     color: var(--color-2);
 }
+.weather{
+  font-family: bold; 
+}
 .Weather{
   margin-left: 15vw;
   font-size: 3vw;
-  font-family: bold;
 }
 .City{
+  font-size: 1vw;
   margin-left: 15vw; 
 }
 .Temperature{
@@ -67,13 +71,13 @@ span{
     width: 50vh;
     height: 10vh;
     font-family: Arial, Helvetica, sans-serif, Times, serif;
-    font-size: 1vw;
+    font-size: 1.3vw;
 }
 p{
    font-size: 1em;
    display:inline;
 }
 h1{
-    font-size: 4em;
+  font-size: 3vw;
 }
 
