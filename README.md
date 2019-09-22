@@ -3,4 +3,4 @@ This repository contains web based application. It shows weather, temparature an
 ## Technology
 HTML, CSS and JavaScript
 ## preview
- https://pratikshatippe.github.io/Weather/
+ https://pratikshatippe.github.io/WeatherApp/
