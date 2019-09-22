@@ -18,7 +18,7 @@ body{
 .cityName{
     margin-top: 20vh;
     margin-left: 15vw;
-    height: 10vh;
+    height: 8vh;
     width: 50vw;
     font-size: 2vw;
     text-align: left;
@@ -31,11 +31,18 @@ span{
     color: var(--color-2);
 }
 .weather{
-  font-family: bold; 
+  font-family: sans-serif; 
 }
 .Weather{
   margin-left: 15vw;
+  font-size: 2.5vw;
+}
+.condition{
+  height: 11vh;
+  width: 50vw;
+  margin-left: 15vw;
   font-size: 3vw;
+  font-family: sans-serif, bold;
 }
 .City{
   font-size: 1vw;
@@ -69,8 +76,8 @@ span{
 .DateTime{
   margin-left: 15vw;
     width: 50vh;
-    height: 10vh;
-    font-family: Arial, Helvetica, sans-serif, Times, serif;
+    height: 6vh;
+    font-family: sans-serif;
     font-size: 1.3vw;
 }
 p{
@@ -79,5 +86,14 @@ p{
 }
 h1{
   font-size: 3vw;
+}
+.fahrenheit,.celsius{
+  color: black;
+}
+.fahrenheit:hover{
+  color: var(--color-3);
+}
+.celsius:hover{
+  color: var(--color-3);
 }
 
