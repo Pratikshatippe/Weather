@@ -1,12 +1,14 @@
+:root{
+    --color-1:black;
+    --color-2:white;
+    --color-3:#1890f0;
+}
 body{
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
 }
-* {
-    box-sizing: border-box;
-  }
   .fahrenheit{
     cursor: pointer;
   }
@@ -14,58 +16,64 @@ body{
     cursor: pointer;
   }
 .cityName{
-    font-size: 1em;
-    margin-left: 50px;
-    margin-top: 80px;
+    margin-top: 20vh;
+    margin-left: 15vw;
+    height: 10vh;
+    width: 50vw;
+    font-size: 2vw;
     text-align: left;
-}
+  }
 span{
-  color:black;
+    color:var(--color-1);
 }
 .column1 h1{
-  color: white;
+    color: var(--color-2);
 }
-#day{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
+.Weather{
+  margin-left: 15vw;
+  font-size: 3vw;
+  font-family: bold;
 }
-#city{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2em;
+.City{
+  margin-left: 15vw; 
 }
-#state{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2em;
-}
-
-#temp{
-  font-size: 2em;
+.Temperature{
+  margin-left: 15vw;
+  text-align: left;
+    width: 50vw;
+    height: 10vh;
+    font-size: 2em;
 }
 .column1{
     float: left;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1890f0;
+    background-color: var(--color-3);
     text-align: center;
-    width: 50%;
+    width: 50vw;
     padding: 150px; 
-    height:100%;
+    height:100vh;
   }
   .column2{
-    background-color:white;
+    height: 100vh;
+    width: 50vw;
+    
+    background-color:var(--color-2);
     float: left;
   }
 .DateTime{
+  margin-left: 15vw;
+    width: 50vh;
+    height: 10vh;
     font-family: Arial, Helvetica, sans-serif, Times, serif;
-    font-style: normal;
-    font-size: "50";
+    font-size: 1vw;
 }
 p{
-  font-size: 1em;
+   font-size: 1em;
    display:inline;
 }
 h1{
-  font-size: 4em;
+    font-size: 4em;
 }
 

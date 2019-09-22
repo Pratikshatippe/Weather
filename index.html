@@ -17,20 +17,21 @@ This file contain designing part of web page such as weather, date, time, temper
                 <h1>Weather<span>App</span></h1>
             </div>
             <div class="col-6 column2">
-                <div class="cityName">
-                   <p id='city'>Pune</p> <p id='state'>Maharashtra</p>
-                        <div class="DateTime">
-                        <p id="day">Tuesday</p>
+                <div class="row cityName">
+                   <p id='city'>Pune</p>,<p id='state'> Maharashtra</p></div>
+                        <div class="row DateTime">
+                        <p id="day">Tuesday</p>,
                         <p id="time">11pm</p> 
                         </div>
-                        <p id="weather">Rainy ☔</p><br>
-                        <p id="temp">25</p>
+                        <div class="row Weather">
+                        <p id="weather">Rainy ☔</p><br></div>
+                        <div class="Temperature" id="temp">25
                         <span class="celsius" onclick=showInput()>&#8451</span>
                    <span>|</span>
-                   <span class="fahrenheit" onclick=fahrenheit()>&#8457</span>
-                        <br><br><br>
-                        <label for="city">Enter City Name</label><br>
-                        <input type="text" id="list" list="datalist" name="cities" placeholder="City,State">
+                   <span class="fahrenheit" onclick=fahrenheit()>&#8457</span></div>
+                        <div class="City">
+                        <label for="city">Choose City</label><br>
+                        <input type="text" id="list" list="datalist" name="cities" placeholder="Select City">
                         <datalist id="datalist">
                         <option value="Pune">Pune</option>
                         <option value="Chennai">Chennai</option>
@@ -39,7 +40,7 @@ This file contain designing part of web page such as weather, date, time, temper
                         <option value="Lucknow">Lucknow</option>
                         <option value="Bhopal">Bhopal</option>
                         </datalist>       <input type="submit" onclick="showInput();"><br/>
-                </div> 
+                    </div>
             </div>
         </div> 
     </body>

@@ -3,9 +3,9 @@
 var information = [
   { cityname: "Pune", state: "Maharashtra", type: "Rainy ☔", temperature: 25 },
   { cityname: "Chennai", state: "Tamil Nadu", type: "Mostly cloudy ☁", temperature: 28},
-  { cityname: "Kolhapur", state: "Maharashtra", type: "sunny ☀️", temperature: 32},
+  { cityname: "Kolhapur", state: "Maharashtra", type: "Sunny ☀️", temperature: 32},
   { cityname: "Bengaluru", state: "Karnataka", type: "Partly Cloudy ⛅", temperature: 21},
-  { cityname: "Lucknow", state: "Uttar Pradesh", type: "sunny ☀️", temperature: 34},
+  { cityname: "Lucknow", state: "Uttar Pradesh", type: "Sunny ☀️", temperature: 34},
   { cityname: "Bhopal", state: "Madhya Pradesh", type: "Partly Cloudy ⛅", temperature: 22}
 ] 
 //compare array value
