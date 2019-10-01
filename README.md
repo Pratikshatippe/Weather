@@ -1,4 +1,4 @@
-#Application Name
+# Application Name
 Weather App
 ## Author Name
 Pratiksha Tippe
