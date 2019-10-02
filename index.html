@@ -14,34 +14,19 @@ This file contain designing part of web page such as weather, date, time, temper
     <body>
         <div class="row">
             <div class="col-6 column1">
-                <h1>Weather<span>App</span></h1>
+                <h1>Weather<span> App</span></h1>
             </div>
             <div class="col-6 column2">
-                <div class="row cityName">
-                   <b><p id='city'>Pune</p>,<p id='state'> Maharashtra</p></div></b>
-                        <div class="row DateTime">
-                        <p id="day">Tuesday</p>,
-                        <p id="time">11pm</p> 
-                        </div>
-                        <div class="row Weather">
-
-                        <p id="weather">Rainy ☔</p></div>
-                        <div class="condition">
+                <div class="cityName">
+                  <p id='city'>Pune</p><br>
+                        <p id="time">Tuesday, 11pm</p><br>
+                        <p id="weather">Rainy </p><br>
                         <p id="temp">25</p>
-                        <span class="celsius" onclick=showInput()>&#8451;</span>
-                   <span>|</span>
-                   <span class="fahrenheit" onclick=fahrenheit()>&#8457;</span></div>
-                        <div class="City">
-                        <label for="city">Choose City</label><br>
-                        <input type="text" id="list" list="datalist" name="cities" placeholder="Select City">
-                        <datalist id="datalist">
-                        <option value="Pune">Pune</option>
-                        <option value="Chennai">Chennai</option>
-                        <option value="Kolhapur">Kolhapur</option>
-                        <option value="Bengaluru">Bengaluru</option>
-                        <option value="Lucknow">Lucknow</option>
-                        <option value="Bhopal">Bhopal</option>
-                        </datalist>       <input type="submit" onclick="showInput();"><br/>
+                        <span class="celsius" onclick=showInput()>&#8451;</span><span>|</span>
+                        <span class="fahrenheit" onclick=fahrenheit()>&#8457;</span><br><br>
+                        <label for="city">Enter City</label>
+                        <input type="text" id="list" list="datalist" name="cities" placeholder="Select City"> 
+                        <p id="search">➡️</p> 
                     </div>
             </div>
         </div> 
