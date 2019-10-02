@@ -78,6 +78,10 @@ select = document.getElementById("list").value;
    document.getElementById("city").innerHTML=data1.name;
   //  document.getElementById("temp").innerHTML=data1.main.temp; 
    document.getElementById("weather").innerHTML=data1.weather[0].description;
+
+   var iconcode = data1.weather[0].icon;
+   var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+   document.getElementById('wicon').src = iconurl;
  });
   
 }
