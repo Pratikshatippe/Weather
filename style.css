@@ -60,6 +60,7 @@ span{
   #search{
     color: var(--color-3);
     font-size: 25px;
+    cursor:pointer;
   }
   #list{
     border-color: var(--color-3);
