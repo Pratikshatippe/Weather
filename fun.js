@@ -65,18 +65,14 @@ demo.daydate1();
 // }
 
 document.getElementById("search").onclick = () =>{
-select = document.getElementById("list").value;
+ var select = document.getElementById("list").value;
  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${select}&units=metric&APPID=5299c506b1cefa6863651e1dff0b3cc8`).then(data =>{
  return data.json();
  }).then(data1 =>{
   //  console.log(data1);
-  var temperature = data1.main.temp;
-  // console.log(temperature);
-    var fahrenheit = Math.round((temperature * 9/5) + 32); 
-    document.getElementById("temp").innerHTML = fahrenheit;
 
    document.getElementById("city").innerHTML=data1.name;
-  //  document.getElementById("temp").innerHTML=data1.main.temp; 
+   document.getElementById("temp").innerHTML=data1.main.temp; 
    document.getElementById("weather").innerHTML=data1.weather[0].description;
 
    var iconcode = data1.weather[0].icon;
@@ -85,6 +81,26 @@ select = document.getElementById("list").value;
  });
   
 }
-
+document.getElementById("fahren").addEventListener("click",function fahrenheit(e){
+  var select = document.getElementById("list").value;
+   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${select}&units=metric&APPID=5299c506b1cefa6863651e1dff0b3cc8`).then(data =>{
+   return data.json();
+   }).then(data1 =>{
+    var temperature = data1.main.temp;
+    // console.log(temperature);
+      var fahrenheit = Math.round((temperature * 9/5) + 32); 
+      document.getElementById("temp").innerHTML = fahrenheit;
+   });
+})
+document.getElementById("cels").addEventListener("click",function celsius(e){
+  var select = document.getElementById("list").value;
+   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${select}&units=metric&APPID=5299c506b1cefa6863651e1dff0b3cc8`).then(data =>{
+   return data.json();
+   }).then(data1 =>{
+    document.getElementById("temp").innerHTML=data1.main.temp; 
+    // console.log(temperature);
+  
+   });
+})
 
   

@@ -70,10 +70,9 @@ p{
    font-size: 1em;
    display:inline;
 }
-.fahrenheit,.celsius{
-  color: black;
+.fahrenheit.active,.celsius.active{
+  background-color: white;
+  color: blue;
 }
-.celsius:hover{
-  color: var(--color-3);
-}
+
 
