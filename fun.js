@@ -25,7 +25,7 @@ document.getElementById("search").onclick = () =>{
 
    document.getElementById("city").innerHTML=data1.name;
    document.getElementById("temp").innerHTML=data1.main.temp; 
-   document.getElementById("weather").innerHTML=data1.weather[0].description;
+   document.getElementById("weather").innerHTML=data1.weather[0].main;
 
    var iconcode = data1.weather[0].icon;
    var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
@@ -53,6 +53,7 @@ document.getElementById("cels").addEventListener("click",function celsius(){
    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${select}&units=metric&APPID=5299c506b1cefa6863651e1dff0b3cc8`).then(data =>{
    return data.json();
    }).then(data1 =>{
+    // var temperature = Math.round(data1.main.temp);
     document.getElementById("temp").innerHTML=data1.main.temp; 
     // console.log(temperature);
    });

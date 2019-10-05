@@ -19,12 +19,14 @@ This file contain designing part of web page such as weather, date, time, temper
             <div class="col-6 column2">
                 <div class="cityName">
                   <p id='city'></p><br>
-                        <p id="time">Tuesday, 11pm</p><br>
+                    <!-- Display cunrrent day and time -->
+                    <p id="time">Tuesday, 11pm</p><br>
+                    <!-- display weather for relative city -->
                         <p id="weather"></p>
                         <p id="icon"><img id="wicon" src=""></p><br>
                         <p id="temp"></p>
                         <span class="celsius" id="cels" onclick="celsius()">&#8451;</span><span>|</span>
-                        <span class="fahrenheit" id="fahren" onclick=fahrenheit()>&#8457;</span><br><br>
+                        <span class="fahrenheit" id="fahren" onclick="fahrenheit()">&#8457;</span><br><br>
                         <label for="city">Enter City </label><br>
                         <input type="text" id="list" list="datalist" name="cities" placeholder=" Enter City"> 
                         <p id="search">➡️</p> 
@@ -33,5 +35,5 @@ This file contain designing part of web page such as weather, date, time, temper
         </div> 
     </body>
     <script src="fun.js"></script>
-    <script src="app.js"></script>
+    <!-- <script src="app.js"></script> -->
 </html>
