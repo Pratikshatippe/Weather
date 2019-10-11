@@ -9,4 +9,4 @@ This repository shows weather for particular city. User choose city from datalis
 * CSS 
 * JavaScript
 ## preview
- https://pratikshatippe.github.io/WeatherApp/
+ https://pratikshatippe.github.io/WeatherApp-using-API/
