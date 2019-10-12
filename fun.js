@@ -1,23 +1,21 @@
 ﻿// javascript file for weather.html file to show city, state, condition and temperature from below array.
 
 // use class daydate show date and time
-class daydate{
-daydate1(){
+class weather{
+getDaydate(){
 let today = new Date();
 let day = today.getDay();
 let daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
-let time1 = (
+let time = (
 today.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
 )
-document.getElementById("time").innerHTML = daylist[day]+","+time1;
+document.getElementById("time").innerHTML = daylist[day]+","+time;
   }
-}
-// creating object of daydate class
-let demo = new daydate();
-demo.daydate1();
+
 // using api shows current weather of city
+getApiData(){
 document.getElementById("search").onclick = () =>{
- var select = document.getElementById("list").value;
+ let select = document.getElementById("list").value;
  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${select}&units=metric&APPID=5299c506b1cefa6863651e1dff0b3cc8`).then(data =>{
  return data.json();
  }).then(data1 =>{
@@ -27,36 +25,38 @@ document.getElementById("search").onclick = () =>{
    document.getElementById("temp").innerHTML=data1.main.temp; 
    document.getElementById("weather").innerHTML=data1.weather[0].main;
 
-   var iconcode = data1.weather[0].icon;
-   var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+   let iconcode = data1.weather[0].icon;
+   let iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
    document.getElementById('wicon').src = iconurl;
  });
-  
 }
+}
+  
+getFahrenheit(){
 
 //Conversion celsius to fahrenheit 
 document.getElementById("fahren").addEventListener("click",function fahrenheit(){
-  var select = document.getElementById("list").value;
-   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${select}&units=metric&APPID=5299c506b1cefa6863651e1dff0b3cc8`).then(data =>{
-   return data.json();
-   }).then(data1 =>{
-    var temperature = data1.main.temp;
+  let temperature= document.getElementById("temp").textContent;
     // console.log(temperature);
-      var fahrenheit = Math.round((temperature * 9/5) + 32); 
+      let fahrenheit = Math.round((temperature * 9/5) + 32); 
       document.getElementById("temp").innerHTML = fahrenheit;
-   });
 })
+}
 
+getCelsius(){
 // Conversion fahrenheit to celsius
-document.getElementById("cels").addEventListener("click",function celsius(){
-  var select = document.getElementById("list").value;
-   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${select}&units=metric&APPID=5299c506b1cefa6863651e1dff0b3cc8`).then(data =>{
-   return data.json();
-   }).then(data1 =>{
-    // var temperature = Math.round(data1.main.temp);
+document.getElementById("cels").addEventListener("click",function celsius(){ 
     document.getElementById("temp").innerHTML=data1.main.temp; 
     // console.log(temperature);
-   });
 })
+}
+}
+
+ 
+let input = new weather();
+input.getDaydate();
+input.getApiData();
+input.getFahrenheit();
+input.getCelsius();
 
   
