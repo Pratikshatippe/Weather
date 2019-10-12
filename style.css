@@ -3,13 +3,9 @@
     --color-2:white;
     --color-3:#1890f0;
 }
-  .fahrenheit{
+#fahrenheit,#celsius{
     cursor: pointer;
   }
-  .celsius{
-    cursor: pointer;
-  }
-
 span{
     color:var(--color-1);
 }
@@ -69,7 +65,7 @@ p{
    font-size: 1em;
    display:inline;
 }
-.fahrenheit:hover,.celsius:hover{
+#fahrenheit:hover,#celsius:hover{
   color: blue;
 }
 
