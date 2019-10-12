@@ -45,7 +45,7 @@ document.getElementById("fahrenheit").addEventListener("click",function displayF
 getCelsius(){
 // Conversion fahrenheit to celsius
 document.getElementById("celsius").addEventListener("click",function displayCelsius(){ 
-    document.getElementById("temp").innerHTML=data1.main.temp; 
+    document.getElementById("temp").textContent; 
     // console.log(temperature);
 })
 }
