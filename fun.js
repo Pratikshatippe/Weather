@@ -34,17 +34,17 @@ document.getElementById("search").onclick = () =>{
 getFahrenheit(){
 
 //Conversion celsius to fahrenheit 
-document.getElementById("fahren").addEventListener("click",function fahrenheit(){
+document.getElementById("fahrenheit").addEventListener("click",function displayFahrenheit(){
   let temperature= document.getElementById("temp").textContent;
     // console.log(temperature);
-      let fahrenheit = Math.round((temperature * 9/5) + 32); 
-      document.getElementById("temp").innerHTML = fahrenheit;
+      let Fahrenheit = Math.round((temperature * 9/5) + 32); 
+      document.getElementById("temp").innerHTML = Fahrenheit;
 })
 }
 
 getCelsius(){
 // Conversion fahrenheit to celsius
-document.getElementById("cels").addEventListener("click",function celsius(){ 
+document.getElementById("celsius").addEventListener("click",function displayCelsius(){ 
     document.getElementById("temp").innerHTML=data1.main.temp; 
     // console.log(temperature);
 })
