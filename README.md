@@ -3,10 +3,11 @@ Weather App
 ## Author Name
 Pratiksha Tippe
 ## Details
-This repository shows weather for particular city. User choose city from datalist it show weather for that city. Also it shows state for that city, weather , temperature, current time and day.
+This repository shows real-time data using online api. User choose any city, it shows weather for that city. Also it shows condition of weather , temperature, current time and day.
 ## Technology
 * HTML
 * CSS 
-* JavaScript
+* JavaScript(ES6)
+* Bootstrap
 ## preview
  https://pratikshatippe.github.io/WeatherApp-using-API/
