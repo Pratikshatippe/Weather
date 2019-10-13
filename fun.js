@@ -36,17 +36,23 @@ getFahrenheit(){
 //Conversion celsius to fahrenheit 
 document.getElementById("fahrenheit").addEventListener("click",function displayFahrenheit(){
   let temperature= document.getElementById("temp").textContent;
-    // console.log(temperature);
+    console.log(temperature);
       let Fahrenheit = Math.round((temperature * 9/5) + 32); 
       document.getElementById("temp").innerHTML = Fahrenheit;
+      document.getElementById("celsius").style.color="rgb(0, 0, 0)";
+      document.getElementById("fahrenheit").style.color="rgb(67, 150, 228)";
 })
 }
 
 getCelsius(){
 // Conversion fahrenheit to celsius
 document.getElementById("celsius").addEventListener("click",function displayCelsius(){ 
-    document.getElementById("temp").textContent; 
-    // console.log(temperature);
+    let temperature = document.getElementById("temp").textContent; 
+    console.log(temperature);
+    let Celsius = Math.round((temperature -32) * 9/5);
+    document.getElementById("temp").innerHTML = Celsius;
+    document.getElementById("celsius").style.color="rgb(67, 150, 228)";
+    document.getElementById("fahrenheit").style.color="rgb(0, 0, 0)";
 })
 }
 }
