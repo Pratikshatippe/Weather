@@ -1,5 +1,4 @@
 ﻿// javascript file for weather.html file to show city, state, condition and temperature from below array.
-
 // use class daydate show date and time
 class weather{
 getDaydate(){
@@ -19,7 +18,6 @@ document.getElementById("search").onclick = () =>{
  $.getJSON("http://api.openweathermap.org/data/2.5/weather?q="+select+"&units=metric&APPID=5299c506b1cefa6863651e1dff0b3cc8",
  function(data1){
   //  console.log(data1);
-
    document.getElementById("city").innerHTML=data1.name;
    document.getElementById("temp").innerHTML=data1.main.temp; 
    document.getElementById("weather").innerHTML=data1.weather[0].main;
@@ -30,38 +28,29 @@ document.getElementById("search").onclick = () =>{
  });
 }
 }
-  
-getFahrenheit(){
-
+}
 //Conversion celsius to fahrenheit 
-document.getElementById("fahrenheit").addEventListener("click",function displayFahrenheit(){
-  let temperature= document.getElementById("temp").textContent;
-    console.log(temperature);
-      let Fahrenheit = Math.round((temperature * 9/5) + 32); 
-      document.getElementById("temp").innerHTML = Fahrenheit;
-      document.getElementById("celsius").style.color="rgb(0, 0, 0)";
-      document.getElementById("fahrenheit").style.color="rgb(67, 150, 228)";
-})
+function getFahrenheit(){
+    let temperature= document.getElementById("temp").textContent;
+      console.log(temperature);
+        let Fahrenheit = Math.round((temperature * 9/5) + 32); 
+        document.getElementById("temp").innerHTML = Fahrenheit;
+        document.getElementById("celsius").style.color="rgb(0, 0, 0)";
+        document.getElementById("fahrenheit").style.color="rgb(67, 150, 228)";
 }
-
-getCelsius(){
-// Conversion fahrenheit to celsius
-document.getElementById("celsius").addEventListener("click",function displayCelsius(){ 
-    let temperature = document.getElementById("temp").textContent; 
-    console.log(temperature);
-    let Celsius = Math.round((temperature -32) * 9/5);
-    document.getElementById("temp").innerHTML = Celsius;
-    document.getElementById("celsius").style.color="rgb(67, 150, 228)";
-    document.getElementById("fahrenheit").style.color="rgb(0, 0, 0)";
-})
-}
+  // Conversion fahrenheit to celsius 
+  function getCelsius(){
+      let temperature = document.getElementById("temp").textContent; 
+      console.log(temperature);
+      let Celsius = Math.round((temperature -32) * 9/5);
+      document.getElementById("temp").innerHTML = Celsius;
+      document.getElementById("celsius").style.color="rgb(67, 150, 228)";
+      document.getElementById("fahrenheit").style.color="rgb(0, 0, 0)";
 }
 
  
 let input = new weather();
 input.getDaydate();
 input.getApiData();
-input.getFahrenheit();
-input.getCelsius();
 
   
