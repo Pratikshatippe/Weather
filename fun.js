@@ -1,5 +1,6 @@
 ﻿// javascript file for weather.html file to show city, state, condition and temperature from below array.
 // use class daydate show date and time
+let temperature;
 class weather{
 getDaydate(){
 let today = new Date();
@@ -19,7 +20,8 @@ document.getElementById("search").onclick = () =>{
  function(data1){
   //  console.log(data1);
    document.getElementById("city").innerHTML=data1.name;
-   document.getElementById("temp").innerHTML=data1.main.temp; 
+   temperature = Math.round(data1.main.temp);
+   document.getElementById("temp").innerHTML=temperature; 
    document.getElementById("weather").innerHTML=data1.weather[0].main;
 
    let iconcode = data1.weather[0].icon;
@@ -31,8 +33,6 @@ document.getElementById("search").onclick = () =>{
 }
 //Conversion celsius to fahrenheit 
 function getFahrenheit(){
-    let temperature= document.getElementById("temp").textContent;
-      console.log(temperature);
         let Fahrenheit = Math.round((temperature * 9/5) + 32); 
         document.getElementById("temp").innerHTML = Fahrenheit;
         document.getElementById("celsius").style.color="rgb(0, 0, 0)";
@@ -40,10 +40,7 @@ function getFahrenheit(){
 }
   // Conversion fahrenheit to celsius 
   function getCelsius(){
-      let temperature = document.getElementById("temp").textContent; 
-      console.log(temperature);
-      let Celsius = Math.round((temperature -32) * 9/5);
-      document.getElementById("temp").innerHTML = Celsius;
+      document.getElementById("temp").innerHTML = temperature;
       document.getElementById("celsius").style.color="rgb(67, 150, 228)";
       document.getElementById("fahrenheit").style.color="rgb(0, 0, 0)";
 }
