@@ -16,8 +16,8 @@ document.getElementById("time").innerHTML = daylist[day]+","+time;
 getApiData(){
 document.getElementById("search").onclick = () =>{
  let select = document.getElementById("list").value;
- $.getJSON("http://api.openweathermap.org/data/2.5/weather?q="+select+"&units=metric&APPID=5299c506b1cefa6863651e1dff0b3cc8",
- function(data1){
+ fetch("http://api.openweathermap.org/data/2.5/weather?q="+select+"&units=metric&APPID=5299c506b1cefa6863651e1dff0b3cc8")
+ .then(response=>response.json()).then(data1 =>{
   //  console.log(data1);
    document.getElementById("city").innerHTML=data1.name;
    temperature = Math.round(data1.main.temp);
